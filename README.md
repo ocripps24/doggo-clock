@@ -33,3 +33,6 @@ This is a simple JavaScript app to show a fun clock. I am using the project to d
 - step 1 - import fonts and link to css file and check the link works with a test style attribute
 - step 2 - apply styling to the various elements: headings, image, button
 - step 3 - align items as desired
+
+8. Add '0' into time formatting when the unit is less than 10. This makes for a consistent format.
+- https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
