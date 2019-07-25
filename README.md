@@ -2,4 +2,4 @@
 
 ## Welcome
 
-This is a simple JavaScript app to show a fun clock. I am using the project to develop my skills in JavaScript. 
+This is a simple JavaScript app to show a fun clock. I am using the project to develop my skills in JavaScript as well as using SASS for the first time. 
