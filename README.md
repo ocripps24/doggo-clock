@@ -4,9 +4,12 @@
 
 This is a simple JavaScript app to show a fun clock. I am using the project to develop my skills in JavaScript as well as using SASS for the first time.
 
+I document my process below including steps taken to research parts that I was unsure on. The reasoning behind this is to demonstrate the ability to research and problem solve on my own. 
+
 ## Process
 
 1. Setup basic HTML structure and various images/css/sass/js files.
+- straightforward steps using existing knowledge
 
 2. Work out how to access time in JavaScript
 - https://tecadmin.net/get-current-date-time-javascript/
@@ -36,3 +39,6 @@ This is a simple JavaScript app to show a fun clock. I am using the project to d
 
 8. Add '0' into time formatting when the unit is less than 10. This makes for a consistent format.
 - https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
+
+9. Change the time doc to a button to enable switching between 12-hour and 24-hour functionality 
+- I used several previous steps to help in the development of this step. 
