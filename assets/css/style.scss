@@ -9,6 +9,7 @@ $normal-text: 200% 'Mukta', cursive;
 }
 body {
   background-color: $bkg-green;
+  width: 100%
 }
 
 .container {
@@ -28,7 +29,7 @@ h4 {
   font: $normal-text;
   font-weight: bold;
   color: $txt-yellow;
-  margin: 10px auto;
+  margin: 10px;
 }
 
 #doggo-clock, #doggo-button {
@@ -38,6 +39,8 @@ h4 {
   border-radius: 10px;
   padding: 5px;
   width: 365px;
+  box-sizing: content-box;
+  cursor: pointer;
 }
 
 #doggo-clock {
@@ -54,6 +57,6 @@ h4 {
 #doggo-button {
   border: none;
   margin-top: 20px;
-  box-sizing: content-box;
-  cursor: pointer;
 }
+
+button:focus {outline:0;}
