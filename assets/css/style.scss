@@ -4,6 +4,9 @@ $txt-yellow: #ffdd67;
 $main-heading: 400% 'Luckiest Guy', cursive;
 $normal-text: 200% 'Mukta', cursive;
 
+* {
+  margin: 0;
+}
 body {
   background-color: $bkg-green;
 }
@@ -18,8 +21,7 @@ body {
 h1 {
   font: $main-heading;
   color: $txt-yellow;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 h4 {
@@ -29,15 +31,20 @@ h4 {
   margin: 10px auto;
 }
 
-#doggo-clock {
+#doggo-clock, #doggo-button {
   font: $normal-text;
-  font-weight: bold;
+  color: $txt-dark;
   background-color: $txt-yellow;
+  border-radius: 10px;
+  padding: 5px;
+  width: 365px;
+}
+
+#doggo-clock {
+  font-weight: bold;
   color: $txt-dark;
   margin-bottom: 30px;
-  width: 375px;
   text-align: center;
-  border-radius: 10px;
 }
 
 #doggo-image {
@@ -45,12 +52,7 @@ h4 {
 }
 
 #doggo-button {
-  background-color: $txt-yellow;
-  color: $normal-text;
-  font: $normal-text;
   border: none;
-  border-radius: 10px;
   margin-top: 20px;
-  padding: 5px;
-  width: 375px;
+  box-sizing: content-box;
 }
