@@ -1,7 +1,56 @@
 $bkg-green: #00b8a9;
 $txt-dark: #17223b;
 $txt-yellow: #ffdd67;
+$main-heading: 400% 'Luckiest Guy', cursive;
+$normal-text: 200% 'Mukta', cursive;
 
 body {
   background-color: $bkg-green;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font: $main-heading;
+  color: $txt-yellow;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font: $normal-text;
+  font-weight: bold;
+  color: $txt-yellow;
+  margin: 10px auto;
+}
+
+#doggo-clock {
+  font: $normal-text;
+  font-weight: bold;
+  background-color: $txt-yellow;
+  color: $txt-dark;
+  margin-bottom: 30px;
+  width: 375px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#doggo-image {
+  min-width: 375px;
+}
+
+#doggo-button {
+  background-color: $txt-yellow;
+  color: $normal-text;
+  font: $normal-text;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 5px;
+  width: 375px;
 }

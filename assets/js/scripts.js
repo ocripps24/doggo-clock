@@ -12,7 +12,7 @@ const displayCurrentTime = () => {
     meridian = "PM";
   }
 
-  let time = hours + ':' + minutes + ':' + seconds + ' ' + meridian + " ;)";
+  let time = hours + ':' + minutes + ':' + seconds + ' ' + meridian;
 
   let doggoClock = document.getElementById('doggo-clock')
   doggoClock.innerText = time;

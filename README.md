@@ -28,3 +28,8 @@ This is a simple JavaScript app to show a fun clock. I am using the project to d
 6. The last step was easy enough to implement but really I wanted the button to cycle through images.
 - this approach uses if / else statements and explicit image names https://stackoverflow.com/questions/35174193/how-do-i-cycle-through-images-with-a-single-button
 - this approach uses a counter method, which is quite cool and potentially more expandable if you're adding lots of images with similar file names https://stackoverflow.com/questions/25291730/change-images-on-click-cycle-through-3-images
+
+7. So the main functionality is all implemented at this stage so the next step is to add some styling to the page.
+- step 1 - import fonts and link to css file and check the link works with a test style attribute
+- step 2 - apply styling to the various elements: headings, image, button
+- step 3 - align items as desired

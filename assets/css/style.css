@@ -1,0 +1,52 @@
+body {
+  background-color: #00b8a9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font: 400% "Luckiest Guy", cursive;
+  color: #ffdd67;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font: 200% "Mukta", cursive;
+  font-weight: bold;
+  color: #ffdd67;
+  margin: 10px auto;
+}
+
+#doggo-clock {
+  font: 200% "Mukta", cursive;
+  font-weight: bold;
+  background-color: #ffdd67;
+  color: #17223b;
+  margin-bottom: 30px;
+  width: 375px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#doggo-image {
+  min-width: 375px;
+}
+
+#doggo-button {
+  background-color: #ffdd67;
+  color: 200% "Mukta", cursive;
+  font: 200% "Mukta", cursive;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 5px;
+  width: 375px;
+}
+
+/*# sourceMappingURL=style.css.map */
