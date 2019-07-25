@@ -7,6 +7,20 @@ This is a simple JavaScript app to show a fun clock. I am using the project to d
 ## Process
 
 1. Setup basic HTML structure and various images/css/sass/js files.
+
 2. Work out how to access time in JavaScript
 - https://tecadmin.net/get-current-date-time-javascript/
 - https://www.tutorialspoint.com/es6/es6_date
+
+3. Make the clock appear on the page, this actually took more a lot longer than it should have done. I had to go through and fix a couple of typos and remember to actually call the function.
+- https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
+
+4. Get the clock to update itself rather than only on refresh. There seem to be two ways to do this:
+- setTimeout(function, milliseconds) Documentation explains that this runs a function after a set number of milliseconds. https://www.w3schools.com/jsref/met_win_settimeout.asp
+- setInterval(function, milliseconds) Very similar but just runs a function at set intervals. https://www.w3schools.com/jsref/met_win_setinterval.asp
+- In the end I got the setInterval function to work so I went with that
+
+5. Set the picture and implement button functionality to change it. An easy way to do this is have a state change of the image src when the button is clicked.
+- https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb
+- http://javascript-coder.com/button/javascript-button-p1.phtml
+- 
