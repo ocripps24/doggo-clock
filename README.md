@@ -23,4 +23,8 @@ This is a simple JavaScript app to show a fun clock. I am using the project to d
 5. Set the picture and implement button functionality to change it. An easy way to do this is have a state change of the image src when the button is clicked.
 - https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb
 - http://javascript-coder.com/button/javascript-button-p1.phtml
-- 
+- https://stackoverflow.com/questions/8783984/html-button-change-image-source
+
+6. The last step was easy enough to implement but really I wanted the button to cycle through images.
+- this approach uses if / else statements and explicit image names https://stackoverflow.com/questions/35174193/how-do-i-cycle-through-images-with-a-single-button
+- this approach uses a counter method, which is quite cool and potentially more expandable if you're adding lots of images with similar file names https://stackoverflow.com/questions/25291730/change-images-on-click-cycle-through-3-images

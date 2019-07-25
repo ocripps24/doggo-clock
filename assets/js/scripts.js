@@ -30,7 +30,14 @@ let timeout = setInterval(updateTime, updateSpeed);
 
 const doggoButton = document.getElementById('doggo-button')
 const doggoImage = document.getElementById('doggo-image')
+let counter = 0;
 
 const changeImage = () => {
-  doggoImage.src="assets/images/doggo_2.jpg"
+  if(counter == 0){
+    doggoImage.src="assets/images/doggo_2.jpg"
+    counter++;
+  } else if(counter == 1){
+    doggoImage.src="assets/images/doggo_1.jpg"
+    counter--;
+  }
 };
