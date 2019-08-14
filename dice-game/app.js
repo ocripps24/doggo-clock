@@ -9,10 +9,17 @@ GAME RULES:
 
 */
 
-var scores = [0, 0];
-var roundScore = 0;
-var activePlayer = 0;
+var scores, roundScore, activePlayer;
+scores = [0, 0];
+roundScore = 0;
+activePlayer = 0;
 
-var dice = Math.floor(Math.random() * 6) + 1;
-
-document.querySelector("#current-0").textContent = dice;
+document.querySelector(".btn-roll").addEventListener("click", function() {
+  // 1. Random number
+  var dice = Math.floor(Math.random() * 6) + 1;
+  // 2. Display the result
+  var diceDOM = document.querySelector(".dice");
+  diceDOM.style.display = "block";
+  diceDOM.src = "dice-" + dice + ".png";
+  // 3. Update the the round score IF the rolled number was not a 1
+});
