@@ -9,47 +9,50 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer;
-scores = [0, 0];
-roundScore = 0;
-activePlayer = 0;
+var scores, roundScore, activePlayer, gamePlaying;
 
-hideDice();
-resetScores();
+init();
 
 document.querySelector(".btn-roll").addEventListener("click", function() {
-  // 1. Random number
-  var dice = Math.floor(Math.random() * 6) + 1;
-  // 2. Display the result
-  var diceDOM = document.querySelector(".dice");
-  diceDOM.style.display = "block";
-  diceDOM.src = "dice-" + dice + ".png";
-  // 3. Update the the round score IF the rolled number was not a 1
-  if (dice !== 1) {
-    roundScore += dice;
-    document.querySelector("#current-" + activePlayer).textContent = roundScore;
-  } else {
-    nextPlayer();
+  if (gamePlaying) {
+    // 1. Random number
+    var dice = Math.floor(Math.random() * 6) + 1;
+    // 2. Display the result
+    var diceDOM = document.querySelector(".dice");
+    diceDOM.style.display = "block";
+    diceDOM.src = "dice-" + dice + ".png";
+    // 3. Update the the round score IF the rolled number was not a 1
+    if (dice !== 1) {
+      roundScore += dice;
+      document.querySelector(
+        "#current-" + activePlayer
+      ).textContent = roundScore;
+    } else {
+      nextPlayer();
+    }
   }
 });
 
 document.querySelector(".btn-hold").addEventListener("click", function() {
-  // 1. Add current score to player total score
-  scores[activePlayer] += roundScore;
+  if (gamePlaying) {
+    // 1. Add current score to player total score
+    scores[activePlayer] += roundScore;
 
-  // 2. Change active player and update UI
-  document.querySelector("#score-" + activePlayer).textContent =
-    scores[activePlayer];
+    // 2. Change active player and update UI
+    document.querySelector("#score-" + activePlayer).textContent =
+      scores[activePlayer];
 
-  // 3. Check if the player won the game
-  if (scores[activePlayer] >= 20) {
-    document.querySelector("#name-" + activePlayer).textContent = "Winner!";
-    hideDice();
-    applyWinnersStyling();
+    // 3. Check if the player won the game
+    if (scores[activePlayer] >= 20) {
+      document.querySelector("#name-" + activePlayer).textContent = "Winner!";
+      hideDice();
+      applyWinnersStyling();
+      gamePlaying = false;
+    }
+
+    // 4. Next Player
+    nextPlayer();
   }
-
-  // 4. Next Player
-  nextPlayer();
 });
 
 document.querySelector(".btn-new").addEventListener("click", init);
@@ -102,6 +105,7 @@ function applyWinnersStyling() {
 }
 
 function init() {
+  gamePlaying = true;
   scores = [0, 0];
   roundScore = 0;
   activePlayer = 0;
