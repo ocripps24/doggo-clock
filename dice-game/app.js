@@ -99,6 +99,7 @@ function removeWinnerStyling() {
 
 function applyWinnersStyling() {
   removeActiveStyling();
+  toggleActiveClasses();
   document
     .querySelector(".player-" + activePlayer + "-panel")
     .classList.add("winner");
