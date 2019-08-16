@@ -52,6 +52,8 @@ document.querySelector(".btn-hold").addEventListener("click", function() {
   nextPlayer();
 });
 
+document.querySelector(".btn-new").addEventListener("click", init);
+
 function nextPlayer() {
   activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
   roundScore = 0;
@@ -82,14 +84,32 @@ function resetCurrentScores() {
   document.getElementById("current-1").textContent = "0";
 }
 
+function removeActiveStyling() {
+  document.querySelector(".player-0-panel").classList.remove("active");
+  document.querySelector(".player-1-panel").classList.remove("active");
+}
+
+function removeWinnerStyling() {
+  document.querySelector(".player-0-panel").classList.remove("winner");
+  document.querySelector(".player-1-panel").classList.remove("winner");
+}
+
 function applyWinnersStyling() {
+  removeActiveStyling();
   document
     .querySelector(".player-" + activePlayer + "-panel")
     .classList.add("winner");
-  document
-    .querySelector(".player-" + activePlayer + "-panel")
-    .classList.remove("active");
-  document
-    .querySelector(".player-" + activePlayer - 1 + "-panel")
-    .classList.remove("active");
+}
+
+function init() {
+  scores = [0, 0];
+  roundScore = 0;
+  activePlayer = 0;
+  hideDice();
+  resetScores();
+  document.querySelector("#name-0").textContent = "Player 1";
+  document.querySelector("#name-1").textContent = "Player 2";
+  removeActiveStyling();
+  removeWinnerStyling();
+  document.querySelector(".player-0-panel").classList.add("active");
 }
